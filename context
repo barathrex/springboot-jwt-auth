@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Root application context - migrated from application-context-test.xml.
+
+  Renamed from "application-context-test.xml" because it was never a test
+  context: it is the only context that defines the DataSources, JobRepository
+  and JobLauncher, and production had to load it too. The old name is kept as
+  an alias for the existing tests (see src/test/resources).
+
+  Changes from the Spring 4 / Batch 3 original are marked [MIGRATED].
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:batch="http://www.springframework.org/schema/batch"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/task https://www.springframework.org/schema/task/spring-task.xsd
+        http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/batch https://www.springframework.org/schema/batch/spring-batch.xsd
+        http://www.springframework.org/schema/jdbc https://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+        http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--
+      [MIGRATED] Schema locations were pinned to spring-beans-3.0.xsd /
+      spring-batch-3.0.xsd / spring-context-3.0.xsd and used http:// URLs.
+      Pinning to 3.0 would reject Batch 5 attributes; http:// no longer
+      resolves from springframework.org. Now version-less https:// locations,
+      which resolve from the jars on the classpath offline.
+    -->
+
+    <!--
+      [MIGRATED] Property source. The original had three mutually exclusive
+      <context:property-placeholder> lines with two commented out, so the
+      deployed configuration depended on editing XML per environment. Property
+      resolution now comes from Spring Boot (application.yml + environment
+      variables + optional external file), which is what makes a single
+      immutable JAR deployable across environments.
+
+      batch.properties is still read so that existing operational property
+      names keep working, but it is now the LOWEST precedence source and
+      contains no credentials.
+    -->
+    <context:property-placeholder
+            location="classpath:batch.properties"
+            ignore-unresolvable="true"
+            order="100"/>
+
+    <context:component-scan base-package="com.hlife.batch"/>
+
+    <!--
+      ================= Spring Batch metadata infrastructure =================
+    -->
+
+    <!--
+      [UNCHANGED semantics] JobRepositoryFactoryBean still exists in Batch 5.
+      isolationLevelForCreate is retained at READ_COMMITTED - changing it would
+      alter concurrent job-start behaviour.
+
+      NOTE: Batch 5 uses a DIFFERENT metadata schema than Batch 3. Run
+      sql/migration-batch3-to-batch5-oracle.sql against the metadata schema
+      BEFORE first start, or the repository will fail on
+      BATCH_JOB_EXECUTION_PARAMS. See report section 8.
+    -->
+    <bean id="jobRepository"
+          class="org.springframework.batch.core.repository.support.JobRepositoryFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="transactionManager" ref="transactionManager"/>
+        <property name="isolationLevelForCreate" value="ISOLATION_READ_COMMITTED"/>
+        <!-- [MIGRATED] Explicit database type. Batch 3 sniffed this from the
+             connection; being explicit avoids a metadata-incompatible guess
+             if the driver reports differently under ojdbc17. -->
+        <property name="databaseType" value="ORACLE"/>
+    </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--
+      [MIGRATED] SimpleJobLauncher -> TaskExecutorJobLauncher.
+      SimpleJobLauncher is removed in Spring Batch 5. TaskExecutorJobLauncher
+      is the direct replacement and keeps identical semantics. The
+      SyncTaskExecutor is retained deliberately: it makes jobLauncher.run()
+      block until the job finishes, which every caller (tests, scheduler)
+      depends on. Swapping it for an async executor would make jobs return
+      immediately and break exit-code reporting.
+    -->
+    <bean id="jobLauncher"
+          class="org.springframework.batch.core.launch.support.TaskExecutorJobLauncher">
+        <property name="jobRepository" ref="jobRepository"/>
+        <property name="taskExecutor" ref="taskExecutor"/>
+    </bean>
+
+    <bean id="taskExecutor" class="org.springframework.core.task.SyncTaskExecutor"/>
+
+    <bean id="jobRegistry"
+          class="org.springframework.batch.core.configuration.support.MapJobRegistry"/>
+
+    <!--
+      [MIGRATED] JobExplorer added. The Batch 3 context had no JobExplorer;
+      the removed spring-batch-admin jobService was the only thing that could
+      read execution history. JobExplorer is the supported replacement and is
+      needed for any restart/monitoring tooling.
+    -->
+    <bean id="jobExplorer"
+          class="org.springframework.batch.core.explore.support.JobExplorerFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="transactionManager" ref="transactionManager"/>
+    </bean>
+
+    <!--
+      [REMOVED] bean id="jobService", class
+      org.springframework.batch.admin.service.SimpleJobServiceFactoryBean.
+
+      Reason: spring-batch-admin (1.3.0.RC1 in the original classpath) was
+      retired by Pivotal/VMware years ago. It has no Spring 6 / Batch 5 build
+      and no Java 25 build, and no artifact exists to depend on. It was an
+      admin-console support bean; no Job, Step, Tasklet, Service or DAO in this
+      codebase references it. Removing it therefore changes no batch
+      behaviour. JobExplorer above covers the read-side capability.
+      See report section 5.
+    -->
+
+    <!--
+      ============================ DataSources ============================
+
+      [MIGRATED] oracle.jdbc.pool.OracleDataSource -> HikariCP.
+
+      The original used OracleDataSource with
+      <property name="driverType" value="javax.sql.DataSource"/>, which is not
+      a valid Oracle driverType value (legal values are "thin", "oci", "kprb")
+      and was silently ignored. OracleDataSource in that configuration is not
+      a pool: every getConnection() opened a brand-new physical connection and
+      the code had to close it by hand. For a long-running WebSphere-hosted
+      app that was masked by the container; for a standalone JAR it is a
+      connection leak waiting to happen.
+
+      HikariCP is the Spring Boot default pool and is used here for all six
+      DataSources. SQL, schemas, URLs, users and transaction semantics are
+      unchanged - only connection acquisition changes.
+
+      CREDENTIALS: every value now comes from the environment. The original
+      batch.properties carried plaintext production-looking Oracle passwords
+      in version control; those have been removed. See report section 11.
+    -->
+
+    <!-- Batch metadata / CAP database. This is the JobRepository datasource. -->
+    <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <property name="jdbcUrl" value="${batch.cap.db.url}"/>
+        <property name="username" value="${batch.cap.db.user}"/>
+        <property name="password" value="${batch.cap.db.password}"/>
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="poolName" value="cap-pool"/>
+        <property name="maximumPoolSize" value="${batch.pool.cap.maxSize:5}"/>
+        <property name="minimumIdle" value="${batch.pool.cap.minIdle:1}"/>
+        <property name="connectionTimeout" value="${batch.pool.connectionTimeoutMs:30000}"/>
+    </bean>
+
+    <bean id="edwDataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <property name="jdbcUrl" value="${batch.edw.cap.db.url}"/>
+        <property name="username" value="${batch.edw.cap.db.user}"/>
+        <property name="password" value="${batch.edw.cap.db.password}"/>
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="poolName" value="edw-pool"/>
+        <property name="maximumPoolSize" value="${batch.pool.edw.maxSize:5}"/>
+        <property name="minimumIdle" value="${batch.pool.edw.minIdle:0}"/>
+        <property name="connectionTimeout" value="${batch.pool.connectionTimeoutMs:30000}"/>
+    </bean>
+
+    <bean id="crmDataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <property name="jdbcUrl" value="${batch.crm.db.url}"/>
+        <property name="username" value="${batch.crm.db.user}"/>
+        <property name="password" value="${batch.crm.db.password}"/>
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="poolName" value="crm-pool"/>
+        <property name="maximumPoolSize" value="${batch.pool.crm.maxSize:5}"/>
+        <property name="minimumIdle" value="${batch.pool.crm.minIdle:0}"/>
+        <property name="connectionTimeout" value="${batch.pool.connectionTimeoutMs:30000}"/>
+    </bean>
+
+    <bean id="ppDataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <property name="jdbcUrl" value="${batch.pp.db.url}"/>
+        <property name="username" value="${batch.pp.db.user}"/>
+        <property name="password" value="${batch.pp.db.password}"/>
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="poolName" value="pp-pool"/>
+        <property name="maximumPoolSize" value="${batch.pool.pp.maxSize:10}"/>
+        <property name="minimumIdle" value="${batch.pool.pp.minIdle:1}"/>
+        <property name="connectionTimeout" value="${batch.pool.connectionTimeoutMs:30000}"/>
+    </bean>
+
+    <bean id="ppTRDDataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <property name="jdbcUrl" value="${batch.pp.trd.db.url}"/>
+        <property name="username" value="${batch.pp.trd.db.user}"/>
+        <property name="password" value="${batch.pp.trd.db.password}"/>
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="poolName" value="pp-trd-pool"/>
+        <property name="maximumPoolSize" value="${batch.pool.trd.maxSize:10}"/>
+        <property name="minimumIdle" value="${batch.pool.trd.minIdle:1}"/>
+        <property name="connectionTimeout" value="${batch.pool.connectionTimeoutMs:30000}"/>
+    </bean>
+
+    <bean id="cspscrmdbDataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <property name="jdbcUrl" value="${batch.comm.csps.crm.db.url}"/>
+        <property name="username" value="${batch.comm.csps.crm.db.user}"/>
+        <property name="password" value="${batch.comm.csps.crm.db.password}"/>
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="poolName" value="csps-crm-pool"/>
+        <property name="maximumPoolSize" value="${batch.pool.cspscrm.maxSize:5}"/>
+        <property name="minimumIdle" value="${batch.pool.cspscrm.minIdle:0}"/>
+        <property name="connectionTimeout" value="${batch.pool.connectionTimeoutMs:30000}"/>
+    </bean>
+
+    <bean id="wave2dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <property name="jdbcUrl" value="${batch.wave2.db.url}"/>
+        <property name="username" value="${batch.wave2.db.user}"/>
+        <property name="password" value="${batch.wave2.db.password}"/>
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+        <property name="poolName" value="wave2-pool"/>
+        <property name="maximumPoolSize" value="${batch.pool.wave2.maxSize:5}"/>
+        <property name="minimumIdle" value="${batch.pool.wave2.minIdle:0}"/>
+        <property name="connectionTimeout" value="${batch.pool.connectionTimeoutMs:30000}"/>
+    </bean>
+
+    <!-- Job definitions -->
+    <import resource="classpath:/META-INF/spring/PP-job-context.xml"/>
+
+    <!--
+      Reconstructed wiring for the eight tasklets that had no job definition in
+      the delivered source. Disabled by default - activate with the
+      "reconstructed-jobs" Spring profile only after reviewing it.
+      See report section 3.
+    -->
+    <beans profile="reconstructed-jobs">
+        <import resource="classpath:/META-INF/spring/PP-job-context-reconstructed.xml"/>
+    </beans>
+
+</beans>
