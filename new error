@@ -1,0 +1,145 @@
+C:\Users\tcs_ban1893@hdfclife.com\Downloads\Batch_code_java25_1340\Batch_code_java25>java -jar target/hlife-pp-batch-2.0.0.jar --job.name=PPIndividualAgentInitialSetupControllerManager
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-09-17 16:31:57,634 INFO [com.hlife.batch.BatchApplication] - <Starting BatchApplication v2.0.0 using Java 25.0.2 with PID 24300 (C:\Users\tcs_ban1893@hdfclife.com\Downloads\Batch_code_java25_1340\Batch_code_java25\target\hlife-pp-batch-2.0.0.jar started by TCS_BAN1893 in C:\Users\tcs_ban1893@hdfclife.com\Downloads\Batch_code_java25_1340\Batch_code_java25)>
+2026-09-17 16:31:57,638 INFO [com.hlife.batch.BatchApplication] - <No active profile set, falling back to 1 default profile: "default">
+2026-09-17 16:31:58,790 WARN [org.springframework.context.annotation.AnnotationConfigApplicationContext] - <Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'PPIndividualAgentSetupControllerManagerNew' defined in BeanDefinition defined in class path resource [META-INF/spring/PP-job-context.xml]: Cannot register bean definition [Root bean: class=org.springframework.aop.scope.ScopedProxyFactoryBean; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in BeanDefinition defined in class path resource [META-INF/spring/PP-job-context.xml]] for bean 'PPIndividualAgentSetupControllerManagerNew' since there is already [Generic bean: class=com.hlife.batch.pp.tasklet.PPIndividualAgentSetupNewTasklet; scope=step; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=false; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in class path resource [META-INF/spring/PP-job-context.xml]] bound.>
+2026-09-17 16:31:58,814 INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] - <
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.>
+2026-09-17 16:31:58,873 ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] - <
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'PPIndividualAgentSetupControllerManagerNew', defined in BeanDefinition defined in class path resource [META-INF/spring/PP-job-context.xml], could not be registered. A bean with that name has already been defined in class path resource [META-INF/spring/PP-job-context.xml] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+>
+
+C:\Users\tcs_ban1893@hdfclife.com\Downloads\Batch_code_java25_1340\Batch_code_java25>java -jar target/hlife-pp-batch-2.0.0.jar --job.name=ppUnblockUsersJob
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-09-17 16:32:54,377 INFO [com.hlife.batch.BatchApplication] - <Starting BatchApplication v2.0.0 using Java 25.0.2 with PID 14716 (C:\Users\tcs_ban1893@hdfclife.com\Downloads\Batch_code_java25_1340\Batch_code_java25\target\hlife-pp-batch-2.0.0.jar started by TCS_BAN1893 in C:\Users\tcs_ban1893@hdfclife.com\Downloads\Batch_code_java25_1340\Batch_code_java25)>
+2026-09-17 16:32:54,381 INFO [com.hlife.batch.BatchApplication] - <No active profile set, falling back to 1 default profile: "default">
+2026-09-17 16:32:55,472 WARN [org.springframework.context.annotation.AnnotationConfigApplicationContext] - <Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'PPIndividualAgentSetupControllerManagerNew' defined in BeanDefinition defined in class path resource [META-INF/spring/PP-job-context.xml]: Cannot register bean definition [Root bean: class=org.springframework.aop.scope.ScopedProxyFactoryBean; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in BeanDefinition defined in class path resource [META-INF/spring/PP-job-context.xml]] for bean 'PPIndividualAgentSetupControllerManagerNew' since there is already [Generic bean: class=com.hlife.batch.pp.tasklet.PPIndividualAgentSetupNewTasklet; scope=step; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=false; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in class path resource [META-INF/spring/PP-job-context.xml]] bound.>
+2026-09-17 16:32:55,498 INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] - <
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.>
+2026-09-17 16:32:55,565 ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] - <
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'PPIndividualAgentSetupControllerManagerNew', defined in BeanDefinition defined in class path resource [META-INF/spring/PP-job-context.xml], could not be registered. A bean with that name has already been defined in class path resource [META-INF/spring/PP-job-context.xml] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+>
+
+C:\Users\tcs_ban1893@hdfclife.com\Downloads\Batch_code_java25_1340\Batch_code_java25>
+C:\Users\tcs_ban1893@hdfclife.com\Downloads\Batch_code_java25_1340\Batch_code_java25>java -jar target/hlife-pp-batch-2.0.0.jar \
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-09-17 16:32:58,191 INFO [com.hlife.batch.BatchApplication] - <Starting BatchApplication v2.0.0 using Java 25.0.2 with PID 876 (C:\Users\tcs_ban1893@hdfclife.com\Downloads\Batch_code_java25_1340\Batch_code_java25\target\hlife-pp-batch-2.0.0.jar started by TCS_BAN1893 in C:\Users\tcs_ban1893@hdfclife.com\Downloads\Batch_code_java25_1340\Batch_code_java25)>
+2026-09-17 16:32:58,194 INFO [com.hlife.batch.BatchApplication] - <No active profile set, falling back to 1 default profile: "default">
+2026-09-17 16:32:59,376 WARN [org.springframework.context.annotation.AnnotationConfigApplicationContext] - <Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'PPIndividualAgentSetupControllerManagerNew' defined in BeanDefinition defined in class path resource [META-INF/spring/PP-job-context.xml]: Cannot register bean definition [Root bean: class=org.springframework.aop.scope.ScopedProxyFactoryBean; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in BeanDefinition defined in class path resource [META-INF/spring/PP-job-context.xml]] for bean 'PPIndividualAgentSetupControllerManagerNew' since there is already [Generic bean: class=com.hlife.batch.pp.tasklet.PPIndividualAgentSetupNewTasklet; scope=step; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=false; primary=false; fallback=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in class path resource [META-INF/spring/PP-job-context.xml]] bound.>
+2026-09-17 16:32:59,398 INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] - <
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.>
+2026-09-17 16:32:59,461 ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] - <
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'PPIndividualAgentSetupControllerManagerNew', defined in BeanDefinition defined in class path resource [META-INF/spring/PP-job-context.xml], could not be registered. A bean with that name has already been defined in class path resource [META-INF/spring/PP-job-context.xml] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+>
+
+C:\Users\tcs_ban1893@hdfclife.com\Downloads\Batch_code_java25_1340\Batch_code_java25>     --job.name=PPSRClosureAgentServiceJob \
+'--job.name' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\tcs_ban1893@hdfclife.com\Downloads\Batch_code_java25_1340\Batch_code_java25>     --job.param.currentDateStrParam=2026-09-17
+'--job.param.currentDateStrParam' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\tcs_ban1893@hdfclife.com\Downloads\Batch_code_java25_1340\Batch_code_java25>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
