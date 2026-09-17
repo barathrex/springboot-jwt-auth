@@ -1,0 +1,491 @@
+Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.2.0/qdox-2.2.0.jar (353 kB at 1.8 MB/s)
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 51 source files with javac [debug parameters release 25] to target\classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING :
+[INFO] -------------------------------------------------------------
+[WARNING] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/dao/GenericDao.java:[9,46] <T>queryForObject(java.lang.String,java.lang.Object[],java.lang.Class<T>) in org.springframework.jdbc.core.JdbcTemplate has been deprecated
+[WARNING] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[462,20] unchecked call to setValue(K,java.lang.Number) as a member of the raw type org.jfree.data.general.DefaultPieDataset
+[WARNING] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[464,20] unchecked call to setValue(K,java.lang.Number) as a member of the raw type org.jfree.data.general.DefaultPieDataset
+[WARNING] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[466,20] unchecked call to setValue(K,java.lang.Number) as a member of the raw type org.jfree.data.general.DefaultPieDataset
+[WARNING] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[467,20] unchecked call to setValue(K,java.lang.Number) as a member of the raw type org.jfree.data.general.DefaultPieDataset
+[WARNING] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[471,21] unchecked call to setValue(K,java.lang.Number) as a member of the raw type org.jfree.data.general.DefaultPieDataset
+[WARNING] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[473,21] unchecked call to setValue(K,java.lang.Number) as a member of the raw type org.jfree.data.general.DefaultPieDataset
+[WARNING] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchRiderRenewalService.java:[224,48] unchecked conversion
+  required: java.util.HashMap<java.lang.String,org.json.JSONObject>
+  found:    java.util.HashMap
+[WARNING] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchRiderRenewalService.java:[228,26] unchecked call to ArrayList(java.util.Collection<? extends E>) as a member of the raw type java.util.ArrayList
+[WARNING] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchRiderRenewalService.java:[231,19] unchecked call to add(int,E) as a member of the raw type java.util.ArrayList
+[INFO] 10 warnings
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/dao/PPRiderRenewalDao.java:[87,44] cannot find symbol
+  symbol:   variable INSERT_COMMISSION_PAYOUT_DETAILS
+  location: class com.hlife.batch.pp.commons.PPSQLConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[519,9] method setBorder in class org.jfree.chart.block.AbstractBlock cannot be applied to given types;
+  required: double,double,double,double
+  found:    org.jfree.chart.block.BlockBorder
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[562,5] method setSectionOutlinePaint in class org.jfree.chart.plot.PiePlot<K> cannot be applied to given types;
+  required: java.lang.Comparable,java.awt.Paint
+  found:    java.awt.Color
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[572,10] method setBorder in class org.jfree.chart.block.AbstractBlock cannot be applied to given types;
+  required: double,double,double,double
+  found:    org.jfree.chart.block.BlockBorder
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[1536,18] cannot find symbol
+  symbol:   method drawLine(int,int,int,int)
+  location: variable contents7 of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[1789,18] cannot find symbol
+  symbol:   method drawLine(int,int,int,int)
+  location: variable contents8 of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[1790,18] cannot find symbol
+  symbol:   method drawLine(int,int,int,int)
+  location: variable contents8 of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[1792,18] cannot find symbol
+  symbol:   method drawLine(int,int,int,int)
+  location: variable contents8 of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[1969,14] cannot find symbol
+  symbol:   method fillRect(float,float,float,float)
+  location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[1973,14] cannot find symbol
+  symbol:   method drawLine(float,float,float,float)
+  location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[1980,14] cannot find symbol
+  symbol:   method drawLine(float,float,float,float)
+  location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2009,14] cannot find symbol
+  symbol:   method moveTextPositionByAmount(float,float)
+  location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2011,14] cannot find symbol
+  symbol:   method drawString(java.lang.String)
+  location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2018,49] cannot find symbol
+  symbol:   method drawString(java.lang.String)
+  location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2019,19] cannot find symbol
+  symbol:   method drawString(java.lang.String)
+  location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2021,19] cannot find symbol
+  symbol:   method drawString(java.lang.String)
+  location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2024,49] cannot find symbol
+  symbol:   method drawString(java.lang.String)
+  location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2025,19] cannot find symbol
+  symbol:   method drawString(java.lang.String)
+  location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2027,20] cannot find symbol
+  symbol:   method drawString(java.lang.String)
+  location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2029,49] cannot find symbol
+  symbol:   method drawString(java.lang.String)
+  location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2030,19] cannot find symbol
+  symbol:   method drawString(java.lang.String)
+  location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2032,19] cannot find symbol
+  symbol:   method drawString(java.lang.String)
+  location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[121,115] cannot find symbol
+  symbol:   variable API_KEY_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[121,53] cannot find symbol
+  symbol:   variable APPLICATION_ID_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[165,146] cannot find symbol
+  symbol:   variable XLS_FILE_EXTENTION
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[208,107] cannot find symbol
+  symbol:   variable API_KEY_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[208,45] cannot find symbol
+  symbol:   variable APPLICATION_ID_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[239,140] cannot find symbol
+  symbol:   variable XLS_FILE_EXTENTION
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[282,107] cannot find symbol
+  symbol:   variable API_KEY_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[282,45] cannot find symbol
+  symbol:   variable APPLICATION_ID_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[313,165] cannot find symbol
+  symbol:   variable XLS_FILE_EXTENTION
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[356,107] cannot find symbol
+  symbol:   variable API_KEY_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[356,45] cannot find symbol
+  symbol:   variable APPLICATION_ID_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[387,140] cannot find symbol
+  symbol:   variable XLS_FILE_EXTENTION
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[430,107] cannot find symbol
+  symbol:   variable API_KEY_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[430,45] cannot find symbol
+  symbol:   variable APPLICATION_ID_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[461,165] cannot find symbol
+  symbol:   variable XLS_FILE_EXTENTION
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[504,107] cannot find symbol
+  symbol:   variable API_KEY_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[504,45] cannot find symbol
+  symbol:   variable APPLICATION_ID_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[550,169] cannot find symbol
+  symbol:   variable XLS_FILE_EXTENTION
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[593,107] cannot find symbol
+  symbol:   variable API_KEY_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[593,45] cannot find symbol
+  symbol:   variable APPLICATION_ID_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[640,139] cannot find symbol
+  symbol:   variable XLS_FILE_EXTENTION
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[683,107] cannot find symbol
+  symbol:   variable API_KEY_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[683,45] cannot find symbol
+  symbol:   variable APPLICATION_ID_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[727,144] cannot find symbol
+  symbol:   variable XLS_FILE_EXTENTION
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[770,107] cannot find symbol
+  symbol:   variable API_KEY_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[770,45] cannot find symbol
+  symbol:   variable APPLICATION_ID_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[816,138] cannot find symbol
+  symbol:   variable XLS_FILE_EXTENTION
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[861,107] cannot find symbol
+  symbol:   variable API_KEY_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[861,45] cannot find symbol
+  symbol:   variable APPLICATION_ID_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[904,144] cannot find symbol
+  symbol:   variable XLS_FILE_EXTENTION
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[947,107] cannot find symbol
+  symbol:   variable API_KEY_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[947,45] cannot find symbol
+  symbol:   variable APPLICATION_ID_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[972,137] cannot find symbol
+  symbol:   variable XLS_FILE_EXTENTION
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[1015,107] cannot find symbol
+  symbol:   variable API_KEY_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[1015,45] cannot find symbol
+  symbol:   variable APPLICATION_ID_REWARD
+  location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[1040,142] cannot find symbol
+  symbol:   variable XLS_FILE_EXTENTION
+  location: class com.hlife.batch.pp.commons.PPConstants
+[INFO] 58 errors
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  31.449 s
+[INFO] Finished at: 2026-09-17T15:34:12+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.0:compile (default-compile) on project hlife-pp-batch: Compilation failure: Compilation failure:
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/dao/PPRiderRenewalDao.java:[87,44] cannot find symbol
+[ERROR]   symbol:   variable INSERT_COMMISSION_PAYOUT_DETAILS
+[ERROR]   location: class com.hlife.batch.pp.commons.PPSQLConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[519,9] method setBorder in class org.jfree.chart.block.AbstractBlock cannot be applied to given types;
+[ERROR]   required: double,double,double,double
+[ERROR]   found:    org.jfree.chart.block.BlockBorder
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[562,5] method setSectionOutlinePaint in class org.jfree.chart.plot.PiePlot<K> cannot be applied to given types;
+[ERROR]   required: java.lang.Comparable,java.awt.Paint
+[ERROR]   found:    java.awt.Color
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[572,10] method setBorder in class org.jfree.chart.block.AbstractBlock cannot be applied to given types;
+[ERROR]   required: double,double,double,double
+[ERROR]   found:    org.jfree.chart.block.BlockBorder
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[1536,18] cannot find symbol
+[ERROR]   symbol:   method drawLine(int,int,int,int)
+[ERROR]   location: variable contents7 of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[1789,18] cannot find symbol
+[ERROR]   symbol:   method drawLine(int,int,int,int)
+[ERROR]   location: variable contents8 of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[1790,18] cannot find symbol
+[ERROR]   symbol:   method drawLine(int,int,int,int)
+[ERROR]   location: variable contents8 of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[1792,18] cannot find symbol
+[ERROR]   symbol:   method drawLine(int,int,int,int)
+[ERROR]   location: variable contents8 of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[1969,14] cannot find symbol
+[ERROR]   symbol:   method fillRect(float,float,float,float)
+[ERROR]   location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[1973,14] cannot find symbol
+[ERROR]   symbol:   method drawLine(float,float,float,float)
+[ERROR]   location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[1980,14] cannot find symbol
+[ERROR]   symbol:   method drawLine(float,float,float,float)
+[ERROR]   location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2009,14] cannot find symbol
+[ERROR]   symbol:   method moveTextPositionByAmount(float,float)
+[ERROR]   location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2011,14] cannot find symbol
+[ERROR]   symbol:   method drawString(java.lang.String)
+[ERROR]   location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2018,49] cannot find symbol
+[ERROR]   symbol:   method drawString(java.lang.String)
+[ERROR]   location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2019,19] cannot find symbol
+[ERROR]   symbol:   method drawString(java.lang.String)
+[ERROR]   location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2021,19] cannot find symbol
+[ERROR]   symbol:   method drawString(java.lang.String)
+[ERROR]   location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2024,49] cannot find symbol
+[ERROR]   symbol:   method drawString(java.lang.String)
+[ERROR]   location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2025,19] cannot find symbol
+[ERROR]   symbol:   method drawString(java.lang.String)
+[ERROR]   location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2027,20] cannot find symbol
+[ERROR]   symbol:   method drawString(java.lang.String)
+[ERROR]   location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2029,49] cannot find symbol
+[ERROR]   symbol:   method drawString(java.lang.String)
+[ERROR]   location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2030,19] cannot find symbol
+[ERROR]   symbol:   method drawString(java.lang.String)
+[ERROR]   location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchFameService.java:[2032,19] cannot find symbol
+[ERROR]   symbol:   method drawString(java.lang.String)
+[ERROR]   location: variable contentStream of type org.apache.pdfbox.pdmodel.PDPageContentStream
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[121,115] cannot find symbol
+[ERROR]   symbol:   variable API_KEY_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[121,53] cannot find symbol
+[ERROR]   symbol:   variable APPLICATION_ID_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[165,146] cannot find symbol
+[ERROR]   symbol:   variable XLS_FILE_EXTENTION
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[208,107] cannot find symbol
+[ERROR]   symbol:   variable API_KEY_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[208,45] cannot find symbol
+[ERROR]   symbol:   variable APPLICATION_ID_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[239,140] cannot find symbol
+[ERROR]   symbol:   variable XLS_FILE_EXTENTION
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[282,107] cannot find symbol
+[ERROR]   symbol:   variable API_KEY_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[282,45] cannot find symbol
+[ERROR]   symbol:   variable APPLICATION_ID_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[313,165] cannot find symbol
+[ERROR]   symbol:   variable XLS_FILE_EXTENTION
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[356,107] cannot find symbol
+[ERROR]   symbol:   variable API_KEY_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[356,45] cannot find symbol
+[ERROR]   symbol:   variable APPLICATION_ID_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[387,140] cannot find symbol
+[ERROR]   symbol:   variable XLS_FILE_EXTENTION
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[430,107] cannot find symbol
+[ERROR]   symbol:   variable API_KEY_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[430,45] cannot find symbol
+[ERROR]   symbol:   variable APPLICATION_ID_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[461,165] cannot find symbol
+[ERROR]   symbol:   variable XLS_FILE_EXTENTION
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[504,107] cannot find symbol
+[ERROR]   symbol:   variable API_KEY_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[504,45] cannot find symbol
+[ERROR]   symbol:   variable APPLICATION_ID_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[550,169] cannot find symbol
+[ERROR]   symbol:   variable XLS_FILE_EXTENTION
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[593,107] cannot find symbol
+[ERROR]   symbol:   variable API_KEY_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[593,45] cannot find symbol
+[ERROR]   symbol:   variable APPLICATION_ID_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[640,139] cannot find symbol
+[ERROR]   symbol:   variable XLS_FILE_EXTENTION
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[683,107] cannot find symbol
+[ERROR]   symbol:   variable API_KEY_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[683,45] cannot find symbol
+[ERROR]   symbol:   variable APPLICATION_ID_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[727,144] cannot find symbol
+[ERROR]   symbol:   variable XLS_FILE_EXTENTION
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[770,107] cannot find symbol
+[ERROR]   symbol:   variable API_KEY_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[770,45] cannot find symbol
+[ERROR]   symbol:   variable APPLICATION_ID_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[816,138] cannot find symbol
+[ERROR]   symbol:   variable XLS_FILE_EXTENTION
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[861,107] cannot find symbol
+[ERROR]   symbol:   variable API_KEY_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[861,45] cannot find symbol
+[ERROR]   symbol:   variable APPLICATION_ID_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[904,144] cannot find symbol
+[ERROR]   symbol:   variable XLS_FILE_EXTENTION
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[947,107] cannot find symbol
+[ERROR]   symbol:   variable API_KEY_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[947,45] cannot find symbol
+[ERROR]   symbol:   variable APPLICATION_ID_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[972,137] cannot find symbol
+[ERROR]   symbol:   variable XLS_FILE_EXTENTION
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[1015,107] cannot find symbol
+[ERROR]   symbol:   variable API_KEY_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[1015,45] cannot find symbol
+[ERROR]   symbol:   variable APPLICATION_ID_REWARD
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] /C:/Users/tcs_ban1893@hdfclife.com/Downloads/Batch_code_25/Batch_code_C/src/main/java/com/hlife/batch/pp/service/PPBatchUserReportsAutomationService.java:[1040,142] cannot find symbol
+[ERROR]   symbol:   variable XLS_FILE_EXTENTION
+[ERROR]   location: class com.hlife.batch.pp.commons.PPConstants
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+C:\Users\tcs_ban1893@hdfclife.com\Downloads\Batch_code_25\Batch_code_C>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
